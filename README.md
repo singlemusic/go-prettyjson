@@ -2,6 +2,8 @@
 
 JSON pretty print for Golang.
 
+![CI](https://github.com/singlemusic/go-prettyjson/workflows/CI/badge.svg?branch=master)
+
 ## Example
 
 ```go
