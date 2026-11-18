@@ -14,6 +14,8 @@ jobs:
     steps:
     - name: Keep Go's paths in this job
       run: |
+        chmod -R u+w "$RUNNER_TEMP/gopath" 2>/dev/null || true
+        rm -rf "$RUNNER_TEMP/gopath" "$RUNNER_TEMP/go-build"
         echo "GOPATH=$RUNNER_TEMP/gopath" >> "$GITHUB_ENV"
         echo "GOCACHE=$RUNNER_TEMP/go-build" >> "$GITHUB_ENV"
     - name: Install Go
